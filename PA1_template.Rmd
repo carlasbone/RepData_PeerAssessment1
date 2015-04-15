@@ -24,14 +24,14 @@ hist(dfbyday$totperday, breaks=10, xlab="Steps", main="Histogram of Total Steps 
 
 ```{r}
 themean <- format(mean(dfbyday$totperday))
-median(dfbyday$totperday)
+themedian <- median(dfbyday$totperday)
 ```
 
 The mean total number of steps taken per day is `r themean`   
+The median total number of steps taken per day is `r themedian` 
 
 ## What is the average daily activity pattern?
-The average daily activity pattern can be seen in the graph below which shows the average number of steps taken 
-over the days for each 5 minute time interval  
+The average daily activity pattern can be seen in the graph below which shows the average number of steps taken over the days for each 5 minute time interval  
 ```{r}
 mydata <- transform(mydf, interval = as.factor(interval))
 by_int <- group_by(mydata,interval)
